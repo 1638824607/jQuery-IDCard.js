@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>jquery身份证分析器</title>
+<script src="http://www.jq22.com/jquery/jquery-1.10.2.js"></script>
+<script type="text/javascript" src="js/IDCardConfig.js" charset="gbk"></script>
+<script type="text/javascript" src="js/jQuery-IDCard.js"></script>
+<style type="text/css"></style>
+<script>
+$(function(){
+	
+})
+function getInfo(){
+		var idCardNo=$(".wrap input").val();
+		var a=$(".wrap input").fun({'idCardNo':idCardNo});
+		var a=a.options;
+		$(".info").html(a.idCardNo+"<br/>"+a.birthday+"<br/>"+a.sex+"<br/>"+a.area+"<br/>"+"年龄:"+a.age);
+	}
+</script>
+</head>
+<body>
+	<div class="wrap">
+		<input type="text" value="44018419910621031x"/>
+    </div>
+	<input type="button" onclick="getInfo();" value="获取信息">
+	<br/>
+	<span class="info"></span>
+	
+</body>
+</html>
